@@ -8,9 +8,16 @@ const typeDefs = gql`
     link: String!
   }
   
+  type DetailContent {
+    title: String!
+    body: String!
+    relatedItems: [Teaser!]!
+  }
+  
   type Query {
     teasers: [Teaser!]!
     hello: String!
+    content: DetailContent!
   }
 `;
 

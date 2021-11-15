@@ -4,7 +4,16 @@
 const resolvers = {
     Query: {
         teasers: () => [{title:'title', body:'body', link: 'link'}],
-        hello: () => 'Hello world!'
+        hello: () => 'Hello world!',
+        content: () => {
+           return {
+               title:'title',
+               body:'body',
+               relatedItems: [{
+                   title:'title',
+                   body:'body',
+                   link: 'link'}]}
+        }
     }
 };
 
