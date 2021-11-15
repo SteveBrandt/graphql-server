@@ -1,4 +1,4 @@
-const { gql } = require('apollo-server');
+import { gql } from 'apollo-server';
 
 // The GraphQL schema
 const typeDefs = gql`
@@ -14,6 +14,6 @@ const typeDefs = gql`
   }
 `;
 
-module.exports = { typeDefs }
+export { typeDefs };
 
 
