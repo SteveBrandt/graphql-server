@@ -8,6 +8,11 @@ const typeDefs = gql`
     link: String!
   }
   
+  type User {
+    name: String!
+    id: Int!
+  }
+  
   type DetailContent {
     title: String!
     body: String!
@@ -18,6 +23,12 @@ const typeDefs = gql`
     teasers: [Teaser!]!
     hello: String!
     content: DetailContent!
+    allNames: [User!]!
+  }
+  
+  type Mutation {
+    createNames(name: String!): User!
+    deleteNames(id: ID!): User!
   }
 `;
 
